@@ -13,7 +13,7 @@ body:
     id: owner
     attributes:
       label: Environment Owner
-      description: Who will we give access to?
+      description: This user will get Roll Based Access Control to the environment
       placeholder: ex. email@example.com
     validations:
       required: false
@@ -21,9 +21,9 @@ body:
     id: workload-type
     attributes:
       label: Workload Type
-      description: What environment type are you looking for, sandbox for experiments, or production for releasing your application?
+      description: What environment type are you looking for? sandbox for experiments, or Non-Production / Production for releasing your applications.
       options:
-        - Production
+        - Non-Production / Production
         - Sandbox
       default: 0
     validations:
@@ -32,6 +32,7 @@ body:
     id: network
     attributes:
       label: What connectivity do you need?
+      description: This determines if private IP connectivity is required by the workload, or if all external dependencies and access will be routed over the public internet.
       multiple: false
       options:
         - Standalown
