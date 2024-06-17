@@ -37,6 +37,14 @@ body:
       options:
         - Standalown
         - Connected
+  - type: input
+    id: existing-sub
+    attributes:
+      label: Add to existing Subscription
+      description: Enter Subscription ID here, otherwise just leave empty
+      placeholder: ex. 0000x000-xx00-0000-00xx-00xx00000xxx
+    validations:
+      required: false
   - type: textarea
     id: description
     attributes:
