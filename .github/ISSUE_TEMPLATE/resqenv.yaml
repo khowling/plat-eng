@@ -1,4 +1,4 @@
-name: Request Environment
+name: Request Application Environment
 description: Request a cloud environment.
 title: "[Name]: "
 labels: ["new-subscription"]
