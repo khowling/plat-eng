@@ -1,20 +1,19 @@
 name: Request Environment
 description: Request a cloud environment for your application.
-title: "[Name]: "
+title: "[App Name]: "
 labels: ["new-subscription", "azure"]
-projects: ["octo-org/1", "octo-org/44"]
 assignees:
   - khowling
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Complete the form to get access a new environemnt, this will take around 5minutes unless approal is needed!
   - type: input
     id: owner
     attributes:
       label: Environment Owner
-      description: How can we get in touch with you if we need more info?
+      description: Who will we give access to?
       placeholder: ex. email@example.com
     validations:
       required: false
