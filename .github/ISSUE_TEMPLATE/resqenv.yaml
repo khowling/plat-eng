@@ -1,7 +1,7 @@
-name: Request Application Environment
-description: Request a cloud environment.
+name: Request Environment
+description: Request a cloud environment for your application.
 title: "[Name]: "
-labels: ["new-subscription"]
+labels: ["new-subscription", "azure"]
 projects: ["octo-org/1", "octo-org/44"]
 assignees:
   - khowling
@@ -11,49 +11,41 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: input
-    id: contact
+    id: owner
     attributes:
-      label: Contact Details
+      label: Environment Owner
       description: How can we get in touch with you if we need more info?
       placeholder: ex. email@example.com
     validations:
       required: false
   - type: textarea
-    id: what-happened
+    id: description
     attributes:
-      label: What happened?
+      label: Breif description of the use of the environment?
       description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
+      placeholder: Tell us what you are doing!
       value: "A bug happened!"
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: workload-type
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Workload Type
+      description: What environment type are you looking for, sandbox for experiments, or production for releasing your application?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - Production
+        - Sandbox
       default: 0
     validations:
       required: true
   - type: dropdown
-    id: browsers
+    id: network
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
+      label: What connectivity do you need?
+      multiple: false
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+        - Standalown
+        - Connected
   - type: checkboxes
     id: terms
     attributes:
